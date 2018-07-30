@@ -8,7 +8,7 @@
 
 html{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Cabin';
     color: var(--dark);
 }
 
@@ -100,19 +100,17 @@ body {
 .showcase h1 {
     font-size: 4rem;
     margin-bottom: 0;
-    color: var(--dark)
+    text-shadow: var(--dark);
 }
 
 .showcase p {
     font-size: 1.3rem;
     margin-top: 0;
-    color: var(--dark)
 }
 
 /* Top Box */
 
 .top-box {
-    background: var(--primary);
     display: grid;
     align-items: center;
     justify-content: center;
@@ -121,15 +119,31 @@ body {
 }
 
 .top-box .price {
-    font-size: 2.5rem;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--light);
 }
 
 .top-box-a {
     grid-area: top-box-a;
+    background: url(../img/top-box-a-img.jpg);
+    background-size: cover;
 }
 
 .top-box-b {
     grid-area: top-box-b;
+    background: url(../img/top-box-b-img.jpg);
+    background-size: cover;
+    
+}
+
+.top-box h4{
+    font-size: 29px;
+    padding: 0;
+    margin: 0;
+    color: var(--light);
+    letter-spacing: 5px;
 }
 
 /* Boxes */
@@ -139,47 +153,104 @@ body {
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     min-height: 300px;
+    #min-width: 500px;
     background-size: cover;
     text-align: center;
 }
 
 .box-1 {
-    background: url(../img/csgo.jpeg);
-    background-size: cover;
-    text-align: center;
-    padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
-    color: var(--light)
+    color: var(--light);
+    position: relative;
 }
 
+
+.box-1-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--dark);
+
+  }
+
+.box-1:hover .overlay {
+    opacity: 0.8;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
 .box-2 {
-    background: url(../img/leagueoflegends.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
-    color: var(--light)
+    color: var(--light);
+    position: relative;
+}
+
+.box-2-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+}
+
+
+.box-2:hover .overlay {
+    opacity: 0.8;
 }
 
 .box-3 {
-    background: url(../img/golfwithfriends.jpg);
-    background-size: cover;
-    background-position: bottom;
-    text-align: top;
-    padding: 1.5rem 2rem;
     box-shadow: var(--shadow);
-    color: var(--light)
+    color: var(--light);
+    position: relative;
+}
+
+.box-3-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
 }
 
 
 
-
-
+.box-3:hover .overlay {
+    opacity: 0.8;
+}
 
 
 /* Media Queries */
-@media (max-width: 700px) {
+@media (max-width: 700px) { 
+    
     .top-container{
         grid-template-areas:
         'showcase showcase'
