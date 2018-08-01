@@ -6,6 +6,7 @@
     --shadow: 0 1px 5px rgba(26, 26, 26, 0.8);
 }
 
+/* global */
 html{
     box-sizing: border-box;
     font-family: 'Cabin';
@@ -153,7 +154,6 @@ body {
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     min-height: 300px;
-    #min-width: 500px;
     background-size: cover;
     text-align: center;
 }
@@ -245,6 +245,32 @@ body {
 
 .box-3:hover .overlay {
     opacity: 0.8;
+}
+
+/* Rules.html */
+
+.rules {
+    color: black;
+    text-decoration: none;
+}
+
+.rules h1 {
+    color: var(--dark);
+    text-align: left;
+}
+
+.rules h3 {
+    color: var(--dark);
+    text-align: left;
+}
+
+.rules ul {
+    list-style: none;
+    text-align: left;
+}
+
+.rules li {
+    padding: 5px;
 }
 
 
