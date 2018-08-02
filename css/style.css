@@ -73,6 +73,16 @@ body {
     transition: .5s;
 }
 
+.main-nav .current {
+    color: var(--dark);
+    background: #fafafa
+}
+
+.main-nav .current:hover {
+    background: none;
+    color: var(--dark);
+}
+
 /* Top Container */
 
 .top-container {
@@ -293,6 +303,7 @@ body {
 
     .boxes {
         grid-template-columns: 1fr;
+        min-height: 150px;
     }
 }
 
