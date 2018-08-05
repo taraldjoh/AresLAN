@@ -2,15 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Areslan | Pakkeliste</title>
-    <link rel="shortcut icon" href="img/areslan_logo.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/png" sizes="32x32" href="http://areslan.no/img/areslan_logo.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="http://areslan.no/img/areslan_logo.ico">
+
+        <meta name="robots" content="follow, index" />
+        <meta name="publisher" content="AresLAN" />
+        <meta name="description" content="AresLAN blir arrangert i Ørsta.">
+        <meta property="og:site_name" content="AresLAN">
+        <meta name="keyword" content="areslan, lan, ørsta, lan i ørsta, møre og romsdal">
+        <meta name="robots" content="index, follow">
+
+        <!-- Google + -->
+        <meta itemprop="[Organization]">
+        <meta itemprop="description" content="AresLAN blir arrangert i Ørsta.">
+        <meta property="og:site_name" content="AresLAN blir arrangert i Ørsta.">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="AresLAN">
+        <meta name="twitter:description" content="AresLAN blir arrangert i Ørsta.">
+        <meta property="og:site_name" content="AresLAN">
+        <meta name="twitter:image" content="http://areslan.no/img/ares.png">
+        <meta name="twitter:url" content="https://areslan.no">
+
+        <!-- Facebook -->
+        <meta property="og:title" content="AresLAN">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://areslan.no">
+        <meta property="og:image" content="http://areslan.no/img/ares.png">
+        <meta property="og:description" content="AresLAN blir arrangert i Ørsta.">
+        <meta property="og:site_name" content="Offentlige tilfluktsrom i Norge - Finn dit tilfluktsrom">
+
+        <title>Areslan | Pakkeliste</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="main.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -24,26 +57,43 @@
             </ul>
         </nav>
         
-        <!-- Top Container-->
-        <section class="top-container">
+         <!-- Top Container-->
+         <section class="top-container">
             <header class="showcase">
                 <h1>AresLAN</h1>
-                <p></p>
             </header>
             <div class="top-box top-box-a">
                 <h4>Deltagerpass</h4>
                 <p class="price">400,-</p>
-                <a href="" class="btn">Kjøp</a>
+                <button class="myBtn">Kjøp</button>
             </div>
             <div class="top-box top-box-b">
                 <h4>Besøkspass</h4>
                 <p class="price">100,-</p>
-                <a href="" class="btn">Kjøp</a>
+                <button class="myBtn">Kjøp</buton>
+                
+            </div>
+            <!-- Modal -->
+            <div id="myModal" class="modal animated fadeIn" >
+                <!-- Modal innhold -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Oops...</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>Beklager! Billettsalget har dessverre ikke startet enda!</p>
+                        <p>For å få med når billettsalget starter, følg oss på <a href="https://www.facebook.com/areslannorge/" target="_blank">Facebook</a>!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="clsBtn" class="span">Lukk</button>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Boxes section-->
-        <a name="regel-liste"></a>
+        <a id="scroll"></a>
         <section class="boxes">
             <div class="box-1"> 
 
@@ -81,7 +131,7 @@
 
         <!-- Footer -->
         <footer>
-            <p>AresLAN &copy; 2018</p>
+            <p>AresLAN 2018 &copy; Utviklet av <a href="http://www.semanta.no" target="_blank">Semanta</a></p>
         </footer>
     </div>
     <!-- wrapper ends-->
