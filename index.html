@@ -16,7 +16,6 @@
 
         <!-- Google + -->
         <meta itemprop="[Organization]">
-        <meta itemprop="name" content="AresLAN">
         <meta itemprop="description" content="AresLAN blir arrangert i Ørsta.">
         <meta property="og:site_name" content="AresLAN blir arrangert i Ørsta.">
 
@@ -38,8 +37,11 @@
 
         <title>Areslan | Home</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
         <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="index.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -62,12 +64,31 @@
                 <div class="top-box top-box-a">
                     <h4>Deltagerpass</h4>
                     <p class="price">400,-</p>
-                    <a href="" class="btn">Kjøp</a>
+                    <button class="myBtn">Kjøp</button>
                 </div>
                 <div class="top-box top-box-b">
                     <h4>Besøkspass</h4>
                     <p class="price">100,-</p>
-                    <a href="" class="btn">Kjøp</a>
+                    <button class="myBtn">Kjøp</buton>
+                    
+                </div>
+                <!-- Modal -->
+                <div id="myModal" class="modal animated fadeInDown" >
+                    <!-- Modal innhold -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Oops...</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Beklager! Bilettsalget har dessverre ikke startet enda!</p>
+                            <p>For å få med når bilettsalget starter, følg oss på <a href="https://www.facebook.com/areslannorge/" target="_blank">Facebook</a>!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="clsBtn" class="span">Lukk</button>
+                        </div>
+                        
+                        </div>
                 </div>
             </section>
 
@@ -101,5 +122,6 @@
             </footer>
         </div>
         <!-- wrapper ends-->
+
     </body>
     </html>
