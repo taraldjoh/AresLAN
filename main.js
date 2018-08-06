@@ -39,6 +39,19 @@ function openModal() {
     btn.onclick = function() {
             fadeOutModal(); 
     }
+
+    var tap = true;
+        document.addEventListener('touchstart',function(event) {
+            tap = true;
+        });
+        document.addEventListener('touchmove',function(event) {
+            tap = false;
+        });
+        document.addEventListener('touchend',function(event) {
+            if(tap) {
+         //users tapped the screen
+      }
+   });
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {

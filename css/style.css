@@ -50,7 +50,6 @@ body {
 #clsBtn:focus {
     transition: .5s;
     box-shadow: var(--shadow);
-    cursor: pointer;
 }
 
 .img {
@@ -349,6 +348,11 @@ body {
         min-height:33%;
         min-width:auto;
     }
+    
+    #clsBtn {
+        display: block;
+        width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -361,5 +365,10 @@ body {
     .boxes img {
         min-height: 33%;
         min-width: auto;
+    }
+    
+    #clsBtn {
+        display: block;
+        width: 100%;
     }
 }
