@@ -1,14 +1,14 @@
 window.onload = start; 
 
 function start() {
-    openModal();
+    openModal();    
     animate();
     document.querySelector(".scroll-effect").addEventListener("click", animate);
 }
 
 function animate() {
     $('html,body').animate({
-        scrollTop: $("#scroll").offset().top - 25
+        scrollTop: $("#scroll").offset().top
     },'slow');
 }
 
