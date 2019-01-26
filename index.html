@@ -72,12 +72,12 @@
   <body>
     <!-- Navbar -->
     <nav id="navbar">
-      <a class="logo" href="#home"
+      <a class="logo" href="#showcase"
         ><h1 class=" text-primary-light">AresLAN</h1></a
       >
 
       <ul>
-        <li><a href="#home">Hjem</a></li>
+        <li><a href="#showcase">Hjem</a></li>
         <li><a href="#ticket">Billett</a></li>
         <li><a href="#rules">Regler</a></li>
         <li><a href="#packing">Pakkeliste</a></li>
@@ -93,28 +93,50 @@
           Dette er AresLAN sin nettside! Her finner du all informasjon du
           trenger for å delta og bli med på Ørsta og omegn råeste LAN!
         </p>
-        <a href="#ticket" class="btn">Kjøp Billett</a>
+        <a href="#ticket" class="btn">Les Mer</a>
       </div>
     </header>
 
     <!-- Section: Tickets -->
-    <section id="ticket" class="bg-primary py-1">
+    <section id="ticket" class="bg-light py-1">
       <div class="container">
-        <h2 class="m-heading text-center">Bestill din billett!</h2>
+        <h2 class="m-heading text-center">
+          <span class="text-primary-light">Bestill</span> din billett nå!
+        </h2>
+
         <div class="item">
-          <div class="item-card item-img-1">
-            <h2>Deltagerpass</h2>
-            <p class="price">400,-</p>
-            <p>Trykk for å bestille!</p>
-          </div>
-          <div class="item-card item-img-2">
-            <h2>Besøkspass</h2>
-            <p class="price">150,-</p>
-            <p>Trykk for å bestille!</p>
+          <button class="tckBtn item-card item-img-1">
+            <div>
+              <i class="fas fa-desktop fa-4x"></i>
+              <h2 class="m-heading">Deltagerpass</h2>
+              <p class="price">400,-</p>
+            </div>
+            <div class="modal"></div>
+          </button>
+          <button class="tckBtn item-card item-img-2">
+            <i class="fas fa-eye fa-4x"></i>
+            <div>
+              <h2 class="m-heading">Besøkspass</h2>
+              <p class="price">150,-</p>
+            </div>
+          </button>
+          <div class="information item-card">
+            <h2 class="m-heading">Informasjon</h2>
+            <ul>
+              <li>
+                <span class="text-dark">Arrangement:</span> AresLAN #4 Høsten
+                2019
+              </li>
+              <li><span class="text-dark">Når:</span> Kommer snart!</li>
+              <li><span class="text-dark">Hvor:</span> Kommer snart!</li>
+              <li><span class="text-dark">Aldersgrense:</span> 13år</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Section: Compos -->
 
     <!-- Section: Rules -->
 
@@ -122,18 +144,18 @@
 
     <!-- Section: Contact -->
 
-    <!-- Modal -->
-    <div id="myModal" class="modal animated fadeIn">
+    <!-- Ticket Modal -->
+    <div id="tckModal" class="modal animated fadeIn" style="display: none;">
       <!-- Modal innhold -->
       <div class="modal-content">
         <div class="modal-header">
           <span class="close">&times;</span>
-          <h2>Oops...</h2>
+          <h2>Whops!</h2>
         </div>
         <div class="modal-body">
           <p>Beklager! Billettsalget har dessverre ikke startet enda!</p>
           <p>
-            For å få med når billettsalget starter, følg oss på
+            For å få med deg når billettsalget starter, følg oss på
             <a href="https://www.facebook.com/areslannorge/" target="_blank"
               >Facebook</a
             >!
@@ -144,9 +166,10 @@
         </div>
       </div>
     </div>
+
+    <!-- Submit Complete Modal -->
   </body>
 </html>
 
-<!-- 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="main.js"></script> -->
+<script src="main.js"></script>

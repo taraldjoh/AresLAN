@@ -1,7 +1,7 @@
 /* CSS Variables */
 :root {
   --primary: #841532;
-  --primary-light: #a71c41;
+  --primary-light: #bd204a;
   --light: rgb(255, 255, 255);
   --bg-primary: #841532;
   --bg-light: #a71c41;
@@ -24,15 +24,19 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--light);
 }
 
 p {
   margin: 0.75rem 0;
 }
 
+button:focus {
+  outline: #bd204a auto 5px;
+}
+
 /* Utility classes */
 .container {
-  max-width: 1100px;
   margin: auto;
   padding: 0 2rem;
   overflow: hidden;
@@ -48,6 +52,10 @@ p {
 
 .text-light {
   color: var(--light);
+}
+
+.text-dark {
+  color: #2c2c2c;
 }
 
 .text-center {
@@ -68,6 +76,25 @@ p {
   background: var(--primary-light);
   transition: 0.5s;
   box-shadow: var(--shadow);
+}
+
+#clsBtn {
+  color: var(--primary);
+  font-weight: 700;
+  background: var(--light);
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+#clsBtn:hover {
+  background: var(--primary-light);
+  color: var(--light);
+}
+
+#clsBtn:focus {
 }
 
 .list {
@@ -97,7 +124,7 @@ p {
   margin-bottom: 2rem;
 }
 
-.bg-light {
+.bg-primary-light {
   background: var(--bg-light);
   color: var(--light);
 }
@@ -110,6 +137,11 @@ p {
 .bg-dark {
   background: var(--bg-dark);
   color: var(--light);
+}
+
+.bg-light {
+  background: var(--light);
+  color: var(--primary);
 }
 
 .py-1 {
@@ -199,10 +231,16 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Section: Ticket */
+/* Section: Ticket & Information */
+#ticket {
+  background: #2c2c2c;
+  color: var(--light);
+}
+
 #ticket .item {
   display: flex;
   padding: 1rem;
+  justify-content: space-evenly;
 }
 
 #ticket .item .item-card {
@@ -213,12 +251,51 @@ p {
   box-shadow: var(--shadow);
 }
 
-#ticket .item .item-card:first-child {
-  background: url(../img/top-box-a-img.jpg) no-repeat center center/cover;
+#ticket .item .tckBtn {
+  color: var(--light);
+  background: var(--bg-primary);
+  border: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-#ticket .item .item-card:last-child {
-  background: url("../img/top-box-b-img.jpg") no-repeat center center/cover;
+#ticket .item .tckBtn:hover {
+  transform: scale(1.1);
+  background: var(--bg-light);
+}
+
+#ticket .item .tckBtn:focus {
+  outline: none;
+}
+
+#ticket .item i {
+  padding: 1rem;
+}
+
+#ticket .item .price {
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#ticket .item .information {
+  display: flex;
+  flex-direction: column;
+  background: #fefefe;
+  color: var(--primary-light);
+  text-align: left;
+  padding: 5rem 3rem;
+}
+
+#ticket .item .information ul {
+  list-style: none;
+}
+
+#ticket .item .information ul li {
+  padding: 0.3rem 0;
+  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 /* The Modal (background) */
@@ -238,13 +315,19 @@ p {
 
 /* Modal Content */
 .modal-content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: #fefefe;
+  border-radius: 7px;
   margin: auto;
-  padding: 0;
-  border: 1px solid #888;
+  margin-top: 200px;
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-content a {
+  color: var(--primary);
+  font-weight: 500;
 }
 
 /* The Close Button */
@@ -257,26 +340,30 @@ p {
 
 .close:hover,
 .close:focus {
-  color: #868686;
-  text-decoration: none;
+  color: var(--primary-light);
   cursor: pointer;
   transition: 0.5s;
 }
 
 .modal-header {
-  padding: 2px 16px;
-  background-color: var(--dark);
+  padding: 1rem;
+  background-color: var(--primary);
   color: white;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 
 .modal-body {
-  padding: 2px 16px;
+  padding: 2rem;
+  font-size: 1.4rem;
 }
 
 .modal-footer {
-  padding: 10px 22px;
-  background-color: var(--dark);
+  padding: 1rem;
+  background-color: var(--primary);
   color: white;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 /* Media Queries */
