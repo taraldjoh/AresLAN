@@ -4,35 +4,48 @@ function start() {
   openModal();
 }
 
-// Ticket Modal
+// Modals
 function openModal() {
-  // Get the modal
-  var modal = document.getElementById("tckModal");
+  // Get the ticket modal
+  var modalTicket = document.getElementById("tckModal");
+  // Get the rule modal
+  var modalRule = document.getElementById("ruleModal");
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal and close when pressed
+  // Ticket close <span element
+  var tckClose = document.getElementById("tckClose");
+  tckClose.addEventListener("click", fadeOutModal);
+  // Rule close <span> element
+  var ruleClose = document.getElementById("ruleClose");
+  ruleClose.addEventListener("click", fadeOutModalRule);
 
-  // Get the closeBtn that can close the modal
+  // Get the closeBtn that can close the modal and close when pressed
+  // Ticket Close Button
+  var tckClsBtn = document.getElementById("tckClsBtn");
+  tckClsBtn.addEventListener("click", fadeOutModal);
+  // Rule Close button
+  var ruleClsBtn = document.getElementById("ruleClsBtn");
+  ruleClsBtn.addEventListener("click", fadeOutModalRule);
 
-  var btn = document.getElementById("clsBtn");
-
+  // Ticket fadeoutmodal
   function fadeOutModal() {
-    modal.className = "modal animated fadeOut";
+    modalTicket.className = "modal animated fadeOut";
     setTimeout(() => {
-      modal.style.display = "none";
-      modal.className = "modal animated fadeIn";
+      modalTicket.style.display = "none";
+      modalTicket.className = "modal animated fadeIn";
     }, 750);
   }
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    fadeOutModal();
-  };
+  // Rule fadeoutmodal
+  function fadeOutModalRule() {
+    modalRule.className = "modal animated fadeOut";
+    setTimeout(() => {
+      modalRule.style.display = "none";
+      modalRule.className = "modal animated fadeIn";
+    }, 750);
+  }
 
-  btn.onclick = function() {
-    fadeOutModal();
-  };
-
+  // Event listener if user clicks outside of the modal
   var tap = true;
   document.addEventListener("touchstart", function(event) {
     tap = true;
@@ -47,17 +60,29 @@ function openModal() {
   });
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == modalTicket) {
       fadeOutModal();
+    }
+    if (event.target == modalRule) {
+      fadeOutModalRule();
     }
   };
 
-  // Modal trigger
-  const modalTriggers = document.querySelectorAll(".tckBtn");
+  // Ticket Modal trigger
+  const modalTicketTriggers = document.querySelectorAll(".tckBtn");
 
-  modalTriggers.forEach(trigger => {
+  modalTicketTriggers.forEach(trigger => {
     trigger.addEventListener("click", () => {
-      modal.style.display = "block";
+      modalTicket.style.display = "block";
+    });
+  });
+
+  // Rule Modal trigger
+  const modalRuleTriggers = document.querySelectorAll(".ruleBtn");
+
+  modalRuleTriggers.forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      modalRule.style.display = "block";
     });
   });
 }
