@@ -78,8 +78,7 @@ button:focus {
   box-shadow: var(--shadow);
 }
 
-#clsBtn:focus {
-}
+
 
 .list {
   margin: 0.5rem 0;
@@ -207,8 +206,7 @@ button:focus {
   height: 100%;
   padding: 0 2rem;
   /* Overlay */
-  position: absolute;
-  top: 85px;
+  top: 84px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -287,6 +285,7 @@ button:focus {
   display: flex;
   justify-content: center;
   padding: 0 4rem;
+  margin-bottom: 6rem;
 }
 
 #rules .rule-content button {
@@ -297,6 +296,7 @@ button:focus {
   box-shadow: var(--shadow);
   border: none;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 #rules .rule-content button:hover {
@@ -307,6 +307,68 @@ button:focus {
 #rules .rule-content button h2 {
   font-size: 1.5rem;
 }
+
+/* Section: Contact */
+#contact {
+  display: flex;
+  
+}
+
+#contact .map, #contact .contact-form {
+  flex: 1;
+  padding: 4rem 2rem;
+}
+
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+
+#contact .contact-form label {
+  display: block;
+}
+
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus  {
+  outline: auto #fff 2px;
+}
+
+#contact .contact-form input, #contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+#contact .contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+#contact .contact-form input[type="submit"] {
+  border: none;
+  background: #fff;
+  color: var(--primary-light);
+  font-weight: 600;
+  transition: .5s;
+  cursor: pointer;
+}
+
+#contact .contact-form input:hover[type="submit"] {
+  background: var(--primary-light);
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: #2c2c2c;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  line-height: 3;
+}
+
+footer a {
+  color: var(--primary-light);
+}
+
 
 /* The Modal (background) */
 .modal {
@@ -394,38 +456,47 @@ button:focus {
 }
 
 /* Rule Modal */
-#ruleModal .modal-content {
+#ruleModal .modal-content,
+#packingModal .modal-content {
   margin-top: 50px;
 }
 
-#ruleModal .modal-header {
+#ruleModal .modal-header ,
+#packingNodam .modal-header{
   padding: 1rem;
 }
 
-#ruleModal .modal-body {
+#ruleModal .modal-body,
+#packingModal .modal-body {
   background: #fff;
   color: #333;
   padding: 2rem 0;
 }
 
-#ruleModal h3 {
+#ruleModal h3,
+#packingModal h3 {
   padding: 1rem;
   color: var(--primary);
 }
 
-#ruleModal ul {
+#ruleModal ul,
+#packingModal ul {
   list-style: none;
 }
 
-#ruleModal ul li {
+#ruleModal ul li,
+#packingModal ul li {
   padding: 0.5rem;
   margin: 0 1rem;
   border-top: rgba(197, 195, 195, 0.61) dotted 0.5px;
+  border-bottom: rgba(197, 195, 195, 0.61) dotted 0.5px;
 }
 
 #ruleModal ul li span {
   color: var(--primary);
 }
+
+
 
 /* Media Queries */
 @media (max-width: 700px) {

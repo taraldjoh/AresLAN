@@ -10,14 +10,19 @@ function openModal() {
   var modalTicket = document.getElementById("tckModal");
   // Get the rule modal
   var modalRule = document.getElementById("ruleModal");
+  // Get the packing modal
+  var modalPacking = document.getElementById("packingModal");
 
   // Get the <span> element that closes the modal and close when pressed
-  // Ticket close <span element
+  // Ticket close <span> element
   var tckClose = document.getElementById("tckClose");
   tckClose.addEventListener("click", fadeOutModal);
   // Rule close <span> element
   var ruleClose = document.getElementById("ruleClose");
   ruleClose.addEventListener("click", fadeOutModalRule);
+  // Packing close <span> element
+  var packingClose = document.getElementById("packingClose");
+  packingClose.addEventListener("click", fadeOutModalPacking);
 
   // Get the closeBtn that can close the modal and close when pressed
   // Ticket Close Button
@@ -26,6 +31,9 @@ function openModal() {
   // Rule Close button
   var ruleClsBtn = document.getElementById("ruleClsBtn");
   ruleClsBtn.addEventListener("click", fadeOutModalRule);
+  // Packing Close Button
+  var packingClsBtn = document.getElementById("packingClsBtn");
+  packingClsBtn.addEventListener("click", fadeOutModalPacking);
 
   // Ticket fadeoutmodal
   function fadeOutModal() {
@@ -45,6 +53,14 @@ function openModal() {
     }, 750);
   }
 
+  // Packing fadeoutmodal
+  function fadeOutModalPacking() {
+    modalPacking.className = "modal animated fadeOut";
+    setTimeout(() => {
+      modalPacking.style.display = "none";
+      modalPacking.className = "modal animated fadeIn";
+    }, 750);
+  }
   // Event listener if user clicks outside of the modal
   var tap = true;
   document.addEventListener("touchstart", function(event) {
@@ -66,8 +82,9 @@ function openModal() {
     if (event.target == modalRule) {
       fadeOutModalRule();
     }
+    if (event.target == modalPacking )
+    fadeOutModalPacking();
   };
-
   // Ticket Modal trigger
   const modalTicketTriggers = document.querySelectorAll(".tckBtn");
 
@@ -83,6 +100,15 @@ function openModal() {
   modalRuleTriggers.forEach(trigger => {
     trigger.addEventListener("click", () => {
       modalRule.style.display = "block";
+    });
+  });
+
+  // Packing Modal Trigger
+  const modalPackingTriggers = document.querySelectorAll(".packingBtn");
+
+  modalPackingTriggers.forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      modalPacking.style.display = "block";
     });
   });
 }
@@ -112,3 +138,18 @@ window.addEventListener("scroll", function() {
     document.querySelector("#navbar").style.opacity = 1;
   }
 });
+
+
+// Initialize and add the Google Map
+function initMap() {
+  //Location
+  const loc = { lat: 62.202888, lng: 6.127200};
+
+  // Center Map on Location
+  const map = new google.maps.Map(document.querySelector(".map"), {
+    zoom: 14,
+    center: loc
+  });
+  // Marker, positioned at location
+  const marker = new google.maps.Marker({position: loc, map: map});
+}
