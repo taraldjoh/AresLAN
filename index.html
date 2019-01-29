@@ -153,10 +153,14 @@
       <div class="contact-form p-2 bg-primary">
         <h2 class="m-heading">Kontakt Oss</h2>
         <p>Vennligst fyll ut skjemaet under for å kontakte oss!</p>
-        <form></form>
+        <form action="/php/submit.php" method="POST" >
           <div class="form-group">
-            <label for="name">Navn</label>
-            <input type="text" name="name" id="name" placeholder="Skriv ditt navn">
+            <label for="first_name">Fornavn</label>
+            <input type="text" name="first_name" id="first_name" placeholder="Skriv ditt fornavn">
+          </div>
+          <div class="form-group">
+            <label for="last_name">Etternavn</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Skriv ditt etternavn">
           </div>
           <div class="form-group">
             <label for="email">E-post</label>
@@ -170,7 +174,8 @@
             <label for="name">Melding</label>
             <textarea name="message" id="message" placeholder="Skriv din melding"></textarea>
           </div>
-          <input type="submit" value="Send">
+          <input class="form-submit" type="submit" value="Send">
+        </form>
       </div>
       <div class="map"></div>
     </section>
@@ -415,7 +420,7 @@
 <!-- JQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 <!-- Local JS file -->
-<script src="main.js"></script>
+<script src="./js/main.js"></script>
 <!-- Google Maps API -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Xx_VI8RNm5ZhAxTTPf099e7M3pZL4B8&callback=initMap"
     async defer></script>

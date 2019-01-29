@@ -153,3 +153,4 @@ function initMap() {
   // Marker, positioned at location
   const marker = new google.maps.Marker({position: loc, map: map});
 }
+
