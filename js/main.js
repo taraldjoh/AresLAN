@@ -82,8 +82,7 @@ function openModal() {
     if (event.target == modalRule) {
       fadeOutModalRule();
     }
-    if (event.target == modalPacking )
-    fadeOutModalPacking();
+    if (event.target == modalPacking) fadeOutModalPacking();
   };
   // Ticket Modal trigger
   const modalTicketTriggers = document.querySelectorAll(".tckBtn");
@@ -139,11 +138,10 @@ window.addEventListener("scroll", function() {
   }
 });
 
-
 // Initialize and add the Google Map
 function initMap() {
   //Location
-  const loc = { lat: 62.202888, lng: 6.127200};
+  const loc = { lat: 62.202888, lng: 6.1272 };
 
   // Center Map on Location
   const map = new google.maps.Map(document.querySelector(".map"), {
@@ -151,6 +149,5 @@ function initMap() {
     center: loc
   });
   // Marker, positioned at location
-  const marker = new google.maps.Marker({position: loc, map: map});
+  const marker = new google.maps.Marker({ position: loc, map: map });
 }
-

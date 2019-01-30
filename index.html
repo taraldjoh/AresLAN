@@ -84,7 +84,7 @@
       </ul>
     </nav>
 
-    <!-- Landing Page -->
+    <!-- Landing Page / Showcase -->
     <header id="showcase">
       <div class="showcase-content">
         <h1 class="l-heading text-light">Velkommen!</h1>
@@ -153,40 +153,67 @@
       <div class="contact-form p-2 bg-primary">
         <h2 class="m-heading">Kontakt Oss</h2>
         <p>Vennligst fyll ut skjemaet under for å kontakte oss!</p>
-        <form action="/php/submit.php" method="POST" >
+        <form action="/php/submit.php" method="POST">
           <div class="form-group">
             <label for="first_name">Fornavn</label>
-            <input type="text" name="first_name" id="first_name" placeholder="Skriv ditt fornavn">
+            <input
+              required
+              type="text"
+              name="first_name"
+              id="first_name"
+              placeholder="Skriv ditt fornavn"
+            />
           </div>
           <div class="form-group">
             <label for="last_name">Etternavn</label>
-            <input type="text" name="last_name" id="last_name" placeholder="Skriv ditt etternavn">
+            <input
+              required
+              type="text"
+              name="last_name"
+              id="last_name"
+              placeholder="Skriv ditt etternavn"
+            />
           </div>
           <div class="form-group">
             <label for="email">E-post</label>
-            <input type="text" name="email" id="email" placeholder="Skriv din e-post">
+            <input
+              required
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Skriv din e-post"
+            />
           </div>
           <div class="form-group">
             <label for="phone">Telefon</label>
-            <input type="text" name="phone" id="phone" placeholder="Skriv ditt telefonnummer">
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Skriv ditt telefonnummer"
+            />
           </div>
           <div class="form-group">
             <label for="name">Melding</label>
-            <textarea name="message" id="message" placeholder="Skriv din melding"></textarea>
+            <textarea
+              required
+              name="message"
+              id="message"
+              placeholder="Skriv din melding"
+            ></textarea>
           </div>
-          <input class="form-submit" type="submit" value="Send">
+          <input class="form-submit" type="submit" value="Send" />
         </form>
       </div>
       <div class="map"></div>
     </section>
     <!-- Footer -->
-    <footer>Nettside levert av <a href="http://www.semanta.no" target="_blank">Semanta</a>. <br> Copyright &copy; 2019 Alle Rettigheter Reservert <br> Org.nummer: 916 591 756</footer>
-
-
-
-
-
-
+    <footer>
+      Nettside levert av
+      <a href="http://www.semanta.no" target="_blank">Semanta</a>. <br />
+      Copyright &copy; 2019 Alle Rettigheter Reservert <br />
+      Org.nummer: 916 591 756
+    </footer>
 
     <!-- Modals -->
     <!-- Ticket Modal -->
@@ -216,7 +243,8 @@
     <div id="ruleModal" class="modal animated fadeIn" style="display: none;">
       <!-- Modal innhold -->
       <div class="modal-content">
-        <div class="modal-header"><span id="ruleClose" class="close">&times;</span>
+        <div class="modal-header">
+          <span id="ruleClose" class="close">&times;</span>
           <h2>Reglement</h2>
         </div>
         <div class="modal-body">
@@ -240,9 +268,9 @@
               deltagere å bruke headsett under lanet.
             </li>
             <li>
-              <span>§1.4</span> – Dersom du ødelegger utstyr som tilhører
-              crew, kulturhuset eller andre, vil du bli stilt som økonomisk
-              ansvarlig for dette.
+              <span>§1.4</span> – Dersom du ødelegger utstyr som tilhører crew,
+              kulturhuset eller andre, vil du bli stilt som økonomisk ansvarlig
+              for dette.
             </li>
             <li>
               <span>§1.5</span> – Kvar deltager får 1 strømuttak til
@@ -250,9 +278,9 @@
               deg strømfordeler.
             </li>
             <li>
-              <span>§1.6</span> – Kvar deltager får en nettverksport, dersom
-              du trenger flere må du ta kontakt med crew, du har IKKE lov til
-              å ta med egne switcher.
+              <span>§1.6</span> – Kvar deltager får en nettverksport, dersom du
+              trenger flere må du ta kontakt med crew, du har IKKE lov til å ta
+              med egne switcher.
             </li>
             <li>
               <span>§1.7</span> – Vi har ikke soveareal, men de som sover,
@@ -260,8 +288,8 @@
               forstyrrer sovende, blir kastet ut umiddelbart.
             </li>
             <li>
-              <span>§1.8</span> – Dersom du skulle trenge mer må du bestille
-              en ekstra plass, eller avtale med sidemannen.
+              <span>§1.8</span> – Dersom du skulle trenge mer må du bestille en
+              ekstra plass, eller avtale med sidemannen.
             </li>
             <li>
               <span>§1.9</span> – Ref §5.1, tar du mer plass enn det du har
@@ -281,8 +309,8 @@
           <h3>Sikkerhet</h3>
           <ul>
             <li>
-              <span>§2.0</span> – Det vil være vakter rundt på huset hele
-              døgnet ilag med crewet og andre frivillige.
+              <span>§2.0</span> – Det vil være vakter rundt på huset hele døgnet
+              ilag med crewet og andre frivillige.
             </li>
             <li>
               <span>§2.1</span> – Vi sjekker bagger, poser og vesker (Kvinners
@@ -292,10 +320,10 @@
               inngang.
             </li>
             <li>
-              <span>§2.2</span> – Dersom du mister båndet du får når du
-              ankommer lanet MÅ du ta kontakt med crew, eller en vakt. Har du
-              ikke bånd og ikke kan bekrefte at du har betalt vil det føre til
-              utkastelse. Bandet skal ALLTID være på.
+              <span>§2.2</span> – Dersom du mister båndet du får når du ankommer
+              lanet MÅ du ta kontakt med crew, eller en vakt. Har du ikke bånd
+              og ikke kan bekrefte at du har betalt vil det føre til utkastelse.
+              Bandet skal ALLTID være på.
             </li>
             <li>
               <span>§2.3</span> – Du skal ALLTID følge crew eller vakter sine
@@ -303,11 +331,11 @@
             </li>
             <li>
               <span>§2.4</span> – Som deltager på AresLAN er du PLIKTIG til å
-              rense datamaskinen din for evt. virus eller skadelige
-              programvarer før du kobler deg opp på vårt nettverk. Skulle det
-              skje problemer der din datamaskin er involvert i spredning av
-              virus er eieren/brukeren av datamaskinen ansvarlig og kan bli
-              stilt ansvarlig for eventuelle kostnader dette fører med.
+              rense datamaskinen din for evt. virus eller skadelige programvarer
+              før du kobler deg opp på vårt nettverk. Skulle det skje problemer
+              der din datamaskin er involvert i spredning av virus er
+              eieren/brukeren av datamaskinen ansvarlig og kan bli stilt
+              ansvarlig for eventuelle kostnader dette fører med.
             </li>
             <li>
               <span>§2.5</span> – Som deltager er du nødt til å merke deg den
@@ -317,14 +345,14 @@
             <li>
               <span>§2.6</span> – Dørene blir stengt klokken 23:59 hver kveld.
               Dette er for å forhindre mye trafikk om natten, samt forhindre
-              eventuelle uønskede gjester. INGEN unntak, hør med crew om du er
-              i tvil.
+              eventuelle uønskede gjester. INGEN unntak, hør med crew om du er i
+              tvil.
             </li>
             <li>
               <span>§2.7</span> – Kniver, skarpe gjenstander eller andre ting
               som kan påføre skade på enten personer eller utstyr er STRENGT
-              forbudt og vil føre til utestenging og politianmeldelse ved
-              grove tilfeller.
+              forbudt og vil føre til utestenging og politianmeldelse ved grove
+              tilfeller.
             </li>
             <li>
               <span>§2.8</span> – Som deltager på AresLAN er du pliktig til å
@@ -337,9 +365,9 @@
             </li>
             <li>
               <span>§2.9</span> – Grunnet eldre bygg og eldre sikringer kan en
-              ikke ta med seg mer enn en skjerm per billett. Andre ‘gadget’s
-              som tar mye strøm er ikke lov utenom en PC, dette er også i
-              hennsyn til brannsikkerhet.
+              ikke ta med seg mer enn en skjerm per billett. Andre ‘gadget’s som
+              tar mye strøm er ikke lov utenom en PC, dette er også i hennsyn
+              til brannsikkerhet.
             </li>
           </ul>
           <h3>Rusmidler</h3>
@@ -349,8 +377,8 @@
               for alkohol og rusmidler er STRENGT forbudt.
             </li>
             <li>
-              <span>§3.1</span> – Synlig beruset deltagere eller personer inne
-              i lokalet vil bli bedt om å forlate arrangementet.
+              <span>§3.1</span> – Synlig beruset deltagere eller personer inne i
+              lokalet vil bli bedt om å forlate arrangementet.
             </li>
           </ul>
           <h3>Billetter</h3>
@@ -358,14 +386,13 @@
             <li><span>§4.0</span> – Betalte billetter refunderes ikke.</li>
             <li>
               <span>§4.1</span> – Ingen skal inn med eller uten PC, uten å ha
-              betalt billett. Om du skal levere noe, skal mottaker komme å
-              hente ved inngangen. Om du vil bare ”inn og se”, så får du
-              betale sann som alle andre med mindre du har avtaler med crew.
+              betalt billett. Om du skal levere noe, skal mottaker komme å hente
+              ved inngangen. Om du vil bare ”inn og se”, så får du betale sann
+              som alle andre med mindre du har avtaler med crew.
             </li>
             <li>
-              <span>§4.2</span> – Når du ankommer vil du få et bånd av farge
-              med en kode på. Dette bandet skal alltid være på (henv. til §
-              2.2)
+              <span>§4.2</span> – Når du ankommer vil du få et bånd av farge med
+              en kode på. Dette bandet skal alltid være på (henv. til § 2.2)
             </li>
           </ul>
         </div>
@@ -379,17 +406,27 @@
     <div id="packingModal" class="modal animated fadeIn" style="display: none;">
       <!-- Modal Innhold -->
       <div class="modal-content">
-        <div class="modal-header"><span id="packingClose" class="close">&times;</span>
+        <div class="modal-header">
+          <span id="packingClose" class="close">&times;</span>
           <h2>Pakkeliste</h2>
         </div>
         <div class="modal-body">
           <h3>Hva trenger du:</h3>
           <ul>
-            <li>Gyldig identifikasjon (ID med bilde - for eksempel førerkort eller bankkort)</li>
+            <li>
+              Gyldig identifikasjon (ID med bilde - for eksempel førerkort eller
+              bankkort)
+            </li>
             <li>Samtykke (Skriftlig eller ved fremmøte fra forelder)</li>
             <li>Datamaskinen din såklart!</li>
-            <li>En nettverkskabel (AresLAN anbefaler en som er mellom 5-10 meter lang - kan også kjøpes i kiosken!)</li>
-            <li>Nødvendige kabler til utstyret ditt, strømkabler, skjermkabler etc. (Vi har ikke slikt til utlån)</li>
+            <li>
+              En nettverkskabel (AresLAN anbefaler en som er mellom 5-10 meter
+              lang - kan også kjøpes i kiosken!)
+            </li>
+            <li>
+              Nødvendige kabler til utstyret ditt, strømkabler, skjermkabler
+              etc. (Vi har ikke slikt til utlån)
+            </li>
             <li>Hodetelefoner (Høytalere er ikke tillatt)</li>
             <li>Toalettsaker (Tannbørste, deodorant etc.)</li>
             <li>Klesskift (Gjerne 2/3)</li>
@@ -397,7 +434,11 @@
             <li>Kontakter og kort for betaling.</li>
             <li>Telefon, i tilfelle din mor vil høre hvordan det går!</li>
             <li>Nødvendige medikament som er viktig for din egen helse.</li>
-            <li>Gaffatape,strips eller noe for å merke utstyret ditt! Vi tar ikke ansvar for utstyr som går tapt, derfor er det lurt at du sikrer utstyret ditt fysisk eller merker det!</li>
+            <li>
+              Gaffatape,strips eller noe for å merke utstyret ditt! Vi tar ikke
+              ansvar for utstyr som går tapt, derfor er det lurt at du sikrer
+              utstyret ditt fysisk eller merker det!
+            </li>
           </ul>
           <h3>Hva du ikke trenger:</h3>
           <ul>
@@ -405,7 +446,11 @@
             <li>Mikrobølgeovn (Kiosken kan varme ting for deg...)</li>
             <li>Vannkoker</li>
             <li>Eksterne høytalere (Dette er ikke The Gathering..)</li>
-            <li>Andre unødige elektroniske artiker - du får ett begrenset antall strømuttak. Dette er for å sørge at alle får nok strøm og at vi ikke overgår kapasiteten!</li>
+            <li>
+              Andre unødige elektroniske artiker - du får ett begrenset antall
+              strømuttak. Dette er for å sørge at alle får nok strøm og at vi
+              ikke overgår kapasiteten!
+            </li>
           </ul>
         </div>
         <div class="modal-footer">
@@ -418,9 +463,12 @@
 </html>
 
 <!-- JQuery CDN -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Local JS file -->
 <script src="./js/main.js"></script>
 <!-- Google Maps API -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Xx_VI8RNm5ZhAxTTPf099e7M3pZL4B8&callback=initMap"
-    async defer></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Xx_VI8RNm5ZhAxTTPf099e7M3pZL4B8&callback=initMap"
+  async
+  defer
+></script>

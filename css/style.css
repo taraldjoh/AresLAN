@@ -78,8 +78,6 @@ button:focus {
   box-shadow: var(--shadow);
 }
 
-
-
 .list {
   margin: 0.5rem 0;
   list-style: none;
@@ -206,7 +204,7 @@ button:focus {
   height: 100%;
   padding: 0 2rem;
   /* Overlay */
-  top: 84px;
+  /* top: 84px; */
   left: 0;
   right: 0;
   bottom: 0;
@@ -223,6 +221,7 @@ button:focus {
   display: flex;
   padding: 1rem;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #ticket .item .item-card {
@@ -286,6 +285,7 @@ button:focus {
   justify-content: center;
   padding: 0 4rem;
   margin-bottom: 6rem;
+  flex-wrap: wrap;
 }
 
 #rules .rule-content button {
@@ -311,10 +311,10 @@ button:focus {
 /* Section: Contact */
 #contact {
   display: flex;
-  
 }
 
-#contact .map, #contact .contact-form {
+#contact .map,
+#contact .contact-form {
   flex: 1;
   padding: 4rem 2rem;
 }
@@ -328,11 +328,12 @@ button:focus {
 }
 
 #contact .contact-form input:focus,
-#contact .contact-form textarea:focus  {
+#contact .contact-form textarea:focus {
   outline: auto #fff 2px;
 }
 
-#contact .contact-form input, #contact .contact-form textarea {
+#contact .contact-form input,
+#contact .contact-form textarea {
   width: 100%;
   padding: 0.5rem;
 }
@@ -347,7 +348,7 @@ button:focus {
   background: #fff;
   color: var(--primary-light);
   font-weight: 600;
-  transition: .5s;
+  transition: 0.5s;
   cursor: pointer;
 }
 
@@ -368,7 +369,6 @@ footer {
 footer a {
   color: var(--primary-light);
 }
-
 
 /* The Modal (background) */
 .modal {
@@ -461,8 +461,8 @@ footer a {
   margin-top: 50px;
 }
 
-#ruleModal .modal-header ,
-#packingNodam .modal-header{
+#ruleModal .modal-header,
+#packingNodam .modal-header {
   padding: 1rem;
 }
 
@@ -496,54 +496,107 @@ footer a {
   color: var(--primary);
 }
 
-
-
 /* Media Queries */
-@media (max-width: 700px) {
-  .top-container {
-    grid-template-areas:
-      "showcase showcase"
-      "top-box-a top-box-b";
+/* @media (min-width: 700px) {
+  #ticket .item {
+    flex-direction: column;
   }
-
-  .showcase h1 {
-    font-size: 2.5rem;
-  }
-
-  .main-nav ul {
-    grid-template-columns: 1fr;
-  }
-
-  .boxes {
-    grid-template-columns: 1fr;
-    min-height: 150px;
-  }
-
-  .boxes img {
-    min-height: 33%;
-    min-width: auto;
-  }
-
-  #clsBtn {
-    display: block;
-    width: 100%;
-  }
-}
+} */
 
 @media (max-width: 500px) {
-  .top-container {
-    grid-template-areas:
-      "showcase"
-      "top-box-a"
-      "top-box-b";
+  /* Phones/Small devices */
+  /* NAVBAR */
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.2rem;
+    position: static;
   }
-  .boxes img {
-    min-height: 33%;
-    min-width: auto;
+  #navbar ul {
+    flex-direction: column;
   }
 
-  #clsBtn {
-    display: block;
+  #navbar ul li {
+    border-bottom: #333 dotted 1px;
+    padding: 0.5rem;
     width: 100%;
+    text-align: center;
+  }
+
+  #navbar ul li a {
+    background: none;
+  }
+  #navbar ul li a:hover {
+    background: none;
+    box-shadow: none;
+  }
+
+  /* Header */
+  #showcase {
+    height: 80vh;
+  }
+
+  #showcase .showcase-content {
+    display: flex;
+  }
+  #showcase .showcase-content h1 {
+    font-size: 3rem;
+  }
+
+  #showcase .showcase-content p {
+    line-height: 2rem;
+  }
+
+  #showcase .showcase-content a {
+    margin-bottom: 100px;
+  }
+
+  /* Section: Ticket/Info */
+  #ticket .item {
+    flex-direction: column;
+  }
+
+  #ticket .item .item-card {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  #ticket .item .information span {
+    display: flex;
+    text-align: left;
+    border-bottom: #333 dotted 1px;
+  }
+  #ticket .item .information ul li {
+    white-space: normal;
+    text-align: left;
+  }
+
+  /* Section: Rules/Packing */
+  #rules h2 {
+    font-size: 1.5rem;
+  }
+
+  #rules .rule-content {
+    flex-direction: column;
+    padding: 0 0;
+    margin-bottom: 3rem;
+  }
+
+  #rules .rule-content button {
+    padding: 3rem 5rem;
+    margin: 2rem;
+  }
+
+  /* Contact */
+  #contact {
+    flex-direction: column;
+  }
+
+  #contact .map {
+    flex: 1;
+  }
+
+  #contact .contact-form input[type="submit"] {
+    padding: 1rem;
   }
 }
