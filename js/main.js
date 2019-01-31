@@ -113,19 +113,28 @@ function openModal() {
 }
 
 // Smooth scrolling
-
 $("#navbar a, .btn, a").on("click", function(event) {
   if (this.hash !== "") {
     event.preventDefault();
 
     const hash = this.hash;
-
-    $("html, body").animate(
-      {
-        scrollTop: $(hash).offset().top - 130
-      },
-      600
-    );
+    if ($(window).width() > 500) {
+      // If Media Screen > 500 px, set scroll -130px from top offset
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top - 130
+        },
+        600
+      );
+    } else {
+      // If Media screen < 500px, set scroll -30px from top offset
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top - 30
+        },
+        600
+      );
+    }
   }
 });
 
@@ -141,13 +150,13 @@ window.addEventListener("scroll", function() {
 // Initialize and add the Google Map
 function initMap() {
   //Location
-  const loc = { lat: 62.202888, lng: 6.1272 };
+  const position = { lat: 62.202888, lng: 6.1272 };
 
   // Center Map on Location
   const map = new google.maps.Map(document.querySelector(".map"), {
     zoom: 14,
-    center: loc
+    center: position
   });
   // Marker, positioned at location
-  const marker = new google.maps.Marker({ position: loc, map: map });
+  const marker = new google.maps.Marker({ position, map });
 }
