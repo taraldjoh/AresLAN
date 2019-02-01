@@ -126,7 +126,7 @@ button:focus {
 }
 
 .py-1 {
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
 }
 .py-2 {
   padding: 2rem 0;
@@ -289,7 +289,6 @@ button:focus {
 }
 
 #rules .rule-content button {
-  padding: 5rem;
   margin: 2rem;
   background: var(--bg-dark);
   color: var(--light);
@@ -305,7 +304,8 @@ button:focus {
 }
 
 #rules .rule-content button h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 8rem;
 }
 
 /* Section: Contact */
@@ -503,7 +503,7 @@ footer a {
   }
 } */
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   /* Phones/Small devices */
   /* NAVBAR */
   #navbar {
@@ -572,7 +572,8 @@ footer a {
   }
 
   /* Section: Rules/Packing */
-  #rules h2 {
+  #rules .rule-content button h2 {
+    padding: 3rem;
     font-size: 1.5rem;
   }
 
@@ -583,11 +584,10 @@ footer a {
   }
 
   #rules .rule-content button {
-    padding: 3rem 5rem;
     margin: 2rem;
   }
 
-  /* Contact */
+  /* Section: Contact */
   #contact {
     flex-direction: column;
   }
@@ -598,5 +598,41 @@ footer a {
 
   #contact .contact-form input[type="submit"] {
     padding: 1rem;
+  }
+
+  /* Modal Button */
+  .modal-content .clsBtn {
+    width: 100%;
+  }
+}
+
+/* Phones with width of up to 330 px (iPhone 5/SE ie) */
+@media (max-width: 330px) {
+  /* Showcase */
+  #showcase .showcase-content h1 {
+    font-size: 2rem;
+  }
+
+  #showcase .showcase-content p {
+    font-size: 1.2rem;
+  }
+
+  /* Section: Ticket */
+  #ticket .item i {
+    font-size: 3rem;
+  }
+
+  #ticket h2 {
+    font-size: 1.5rem;
+  }
+
+  #ticket p {
+    font-size: 1rem;
+  }
+
+  /* Section: Rules  */
+  #rules h2 {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
   }
 }
