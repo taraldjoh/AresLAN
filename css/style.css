@@ -261,6 +261,7 @@ button:focus {
 
 #ticket .item .information {
   display: flex;
+  flex: none;
   flex-direction: column;
   background: #fefefe;
   color: var(--primary-light);
