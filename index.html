@@ -197,10 +197,12 @@
             <label for="name">Melding</label>
             <textarea
               required
+              maxlength="255"
               name="message"
               id="message"
-              placeholder="Skriv din melding"
+              placeholder="Skriv din melding (Maks 255 karakterer)"
             ></textarea>
+            <div id="charNum"></div>
           </div>
           <input class="form-submit" type="submit" value="Send" />
         </form>

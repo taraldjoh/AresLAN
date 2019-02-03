@@ -66,7 +66,8 @@ button:focus {
   display: inline-block;
   color: #fff;
   background: var(--primary);
-  padding: 0.8rem 2rem;
+  padding: 1.3rem 3rem;
+  font-size: 1.3rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -278,6 +279,7 @@ button:focus {
   white-space: nowrap;
   font-size: 1.1rem;
   font-weight: 500;
+  border-bottom: #333 dotted 1px;
 }
 
 /* Section: Rules */
@@ -336,7 +338,7 @@ button:focus {
 #contact .contact-form input,
 #contact .contact-form textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 #contact .contact-form textarea {
@@ -422,7 +424,8 @@ footer a {
   color: var(--primary);
   font-weight: 700;
   background: var(--light);
-  padding: 1rem;
+  padding: 1.3rem 3rem;
+  font-size: 1.3rem;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -456,7 +459,7 @@ footer a {
   border-bottom-right-radius: 7px;
 }
 
-/* Rule Modal */
+/* Rule and Packing Modal */
 #ruleModal .modal-content,
 #packingModal .modal-content {
   margin-top: 50px;
@@ -498,15 +501,10 @@ footer a {
 }
 
 /* Media Queries */
-/* @media (min-width: 700px) {
-  #ticket .item {
-    flex-direction: column;
-  }
-} */
 
 @media (max-width: 768px) {
   /* Phones/Small devices */
-  /* NAVBAR */
+  /* Navbar */
   #navbar {
     flex-direction: column;
     align-items: center;
