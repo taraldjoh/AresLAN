@@ -360,6 +360,11 @@ button:focus {
   color: #fff;
 }
 
+/* Honeypot input */
+#contact .contact-form #website {
+  display: none;
+}
+
 /* Footer */
 footer {
   background: #2c2c2c;
