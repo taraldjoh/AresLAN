@@ -7,10 +7,10 @@ if(isset($_POST['email'])) {
  
     function died($error) {
         // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
+        echo "Beklager, men der ser ut til å være et eller flere problem med skjemaet du prøvde å sende inn. ";
+        echo "Feilen er som følgende:<br /><br />";
         echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
+        echo "Vennligst rett opp feilen(e) og prøv åå nytt.<br /><br />";
         die();
     }
  
@@ -21,7 +21,7 @@ if(isset($_POST['email'])) {
         !isset($_POST['email']) ||
         !isset($_POST['phone']) ||
         !isset($_POST['message'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
+        died('Beklager, men der ser ut til å være et eller flere problem med skjemaet du prøvde å sende inn.');       
     }
  
      
