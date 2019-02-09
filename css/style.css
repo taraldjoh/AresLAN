@@ -205,7 +205,6 @@ button:focus {
   height: 100%;
   padding: 0 2rem;
   /* Overlay */
-  /* top: 84px; */
   left: 0;
   right: 0;
   bottom: 0;
@@ -221,13 +220,14 @@ button:focus {
 #ticket .item {
   display: flex;
   padding: 1rem;
-  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 #ticket .item .item-card {
   flex: 1;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   padding: 5rem 5rem;
   margin: 2rem;
   box-shadow: var(--shadow);
@@ -261,13 +261,9 @@ button:focus {
 }
 
 #ticket .item .information {
-  display: flex;
-  flex: none;
-  flex-direction: column;
   background: #fefefe;
   color: var(--primary-light);
   text-align: left;
-  padding: 5rem 3rem;
 }
 
 #ticket .item .information ul {
