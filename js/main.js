@@ -164,9 +164,8 @@ function initMap() {
 }
 
 //Character countdown, max 255 chars. Stop if hit
-var maxLength = 255;
-$('textarea').keyup(function() {
-  var length = $(this).val().length;
-  var length = maxLength-length;
-  $('#charNum').text(length);
+const MAX_LENGTH = 255;
+document.querySelector("textarea").addEventListener("keyup", e => {
+  document.querySelector("#charNum").innerHTML =
+    MAX_LENGTH - e.target.value.length;
 });
